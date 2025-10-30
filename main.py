@@ -66,7 +66,7 @@ async def chat(request: Request):
         # Basic XSS protection
         user_message = user_message.replace("<", "&lt;").replace(">", "&gt;")
 
-        prompt = f"{SYSTEM_PROMPT}\n\nUser: {user_message}\nChiarellaBot:"
+        prompt = f"{SYSTEM_PROMPT}\n\nUser: {user_message}\MontsBot:"
         
         response = model.generate_content(prompt)
         
